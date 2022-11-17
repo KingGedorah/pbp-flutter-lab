@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -91,6 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      drawer: HamburgerMenu(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

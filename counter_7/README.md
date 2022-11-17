@@ -19,3 +19,38 @@ Stateless widget merupakan widget yang keadaannya tidak dapat diubah setelah wid
 - Membuat projek baru flutter bernama `counter_7`
 - Membuat fungsi `_decrementCounter` untuk mengurangi nilai `_counter` dan fungsi -  `_checkingNumber` untuk menentukan apakah angka tersebut ganjil atau genap
 - Membuat `button` yang ketika diklik akan terhubung dengan fungsi `_decrement counter` dan mengatur _padding_nya.
+
+# Tugas 8 : Flutter Form
+
+## Perbedaan `Navigator.push` dan `Navigator.pushReplacement`
+`Navigator.push` menambahkan `route` ke bagian paling atas dari stack `navigator`. Sedangkan `Navigator.pushReplacement` menambahkan `route` ke _top of stack_ dan juga menghilangkan `route` sebelumnya.
+
+## Widget yang digunakan
+1.  `Text`, menampilkan string dengan _single style_
+2.  `Row`, menampilkan children secara horizontal
+3.  `Column`, menampilkan children secara vertikal
+4.  `Scaffold`, menerapkan dasar _visual layout_ material design
+5.  `Padding`, memberi padding kepda child
+6.  `Drawer`, panel horizontal di pinggir scaffold yang berguna untuk navigaso dalam aplikasi
+7.  `ListTile`, baris yang mengandung teks dan ikon
+8.  `Card`, panel yang biasa digunakan untuk menampilkan informasi.
+9.  `Form`, container untuk grouping form field widget
+10. `TextFormField`, field text yang bisa digunakan sebagai inputan
+11. `TextButton`, button yang berisi teks
+12. `Navigator`, mengelola child widgets dengan prinsip stack
+13. `Center`, mengatur child widget ke posisi tengah
+
+## Event pada Flutter
+1.  `onSaved`
+2.  `onPressed`
+3.  `onChanged`
+
+## Cara kerja `Navigator`
+Navigator memiliki prinsip stack. Jadi halaman yang ditampilkan adalah halaman yang berada pada _top of stack_
+
+## Implementasi
+1.  Membuat `form.dart`
+2.  Membuat field - field inputan yang sesuai dengan perintah soal
+2.  Membuat `data.dart`
+3.  Menampilkan inputan dari field yang sudah ada di `form.dart` tadi
+4.  Membuat `Drawer / Hamburger Menu` sebagai navigator halaman
