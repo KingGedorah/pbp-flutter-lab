@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'drawer.dart';
+// import 'page/drawer.dart';
+import 'page/form.dart';
+import 'page/databudget.dart';
+import 'page/mywatchlist_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -92,7 +95,48 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      drawer: HamburgerMenu(),
+      drawer: Drawer (
+      child: Column(
+        children: [
+          ListTile(
+            title: const Text('counter_7'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyHomePage(title: 'Program Counter')),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Tambah Budget'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyForm()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Data Budget'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyBudget()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watchlist'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyWatchListPage()),
+              );
+            },
+          ),
+        ],
+      ),
+    ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

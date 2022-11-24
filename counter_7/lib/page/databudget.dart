@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/drawer.dart';
-import 'package:counter_7/form.dart';
+// import 'package:counter_7/drawer.dart';
+import 'form.dart';
+import 'package:counter_7/main.dart';
+import 'mywatchlist_page.dart';
 
 class MyBudget extends StatefulWidget {
   const MyBudget({super.key});
@@ -17,7 +19,48 @@ class _DataState extends State<MyBudget> {
       appBar: AppBar(
         title: Text('Data Budget'),
       ),
-      drawer: HamburgerMenu(),
+      drawer: Drawer (
+      child: Column(
+        children: [
+          ListTile(
+            title: const Text('counter_7'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyHomePage(title: 'Program Counter')),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Tambah Budget'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyForm()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Data Budget'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyBudget()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watchlist'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyWatchListPage()),
+              );
+            },
+          ),
+        ],
+      ),
+    ),
       body: ListView.builder(
         itemCount: myBudget.length,
         itemBuilder: (context, index) {

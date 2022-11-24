@@ -1,6 +1,8 @@
-import 'drawer.dart';
+// import 'drawer.dart';
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'package:counter_7/main.dart';
+import 'databudget.dart';
+import 'mywatchlist_page.dart';
 
 class Budget {
   String judul;
@@ -33,7 +35,48 @@ class _MyFormState extends State<MyForm> {
       appBar: AppBar(
         title: Text('Form Budget'),
       ),
-      drawer: HamburgerMenu(),
+      drawer: Drawer (
+      child: Column(
+        children: [
+          ListTile(
+            title: const Text('counter_7'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyHomePage(title: 'Program Counter')),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Tambah Budget'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyForm()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('Data Budget'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyBudget()),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watchlist'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context, 
+                MaterialPageRoute(builder: (context) => const MyWatchListPage()),
+              );
+            },
+          ),
+        ],
+      ),
+    ),
       body: Form(
         key: _formKey,
         child: Column(
