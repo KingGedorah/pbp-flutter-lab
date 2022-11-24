@@ -54,3 +54,29 @@ Navigator memiliki prinsip stack. Jadi halaman yang ditampilkan adalah halaman y
 2.  Membuat `data.dart`
 3.  Menampilkan inputan dari field yang sudah ada di `form.dart` tadi
 4.  Membuat `Drawer / Hamburger Menu` sebagai navigator halaman
+
+<br>
+
+# Tugas 9 : Integrasi Web Service pada Flutter
+
+## Apakah bisa mengambil data JSON tanpa membuat model terlebih dahulu?
+Bisa, kita bisa mengambil data JSON tanpa membuat model terlebih dahulu. Namun, untuk memudahkan kita dalam membuat program dan sebagai contoh best practice kita dapat membuat modelnya terlebih dahulu
+
+<br>
+
+## Widget yang digunakan kali ini
+1.  `Text`, menampilkan string dengan _single style_
+2.  `Row`, menampilkan children secara horizontal
+3.  `Column`, menampilkan children secara vertikal
+4.  `Scaffold`, menerapkan dasar _visual layout_ material design
+5.  `Padding`, memberi padding kepda child
+6.  `Drawer`, panel horizontal di pinggir scaffold yang berguna untuk navigaso dalam aplikasi
+7.  `ListTile`, baris yang mengandung teks dan ikon
+
+## Mekanisme pengambilan datar dari JSON
+- Membuat fungsi `fetchMyWatchList` yang akan dipanggil oleh `FutureBuilder`
+- Mengambil data JSON dari url yang sudah dimasukkan yang nantinya diconvert menjadi objek `MyWatchList` 
+- Mengambalikan data yang sudah dikonversi tadi dan menampilkannya pada flutter app
+
+## Implementasi
+Implementasi tugas ini mirip dengan tutorial lab 8 flutter. Mmebuat model yang diperlukan lalu menginstall package http. Membuat `mywatchlsit.dart`, `mywatchlist_page.dart` dan `mywatchlist_detail.dart`. Menambahkan navigasi pada drawer yang sudah dibuat sebelumnya. 
